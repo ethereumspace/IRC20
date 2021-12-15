@@ -1,7 +1,7 @@
 {
   "canisters": {
     "template": {
-      "build": "cargo build --target wasm32-unknown-unknown --package  template --release",
+      "build": "./build.sh",
       "candid": "src/template/src/lib.did",
       "wasm": "target/wasm32-unknown-unknown/release/template.wasm",
       "type": "custom"

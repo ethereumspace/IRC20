@@ -1,0 +1,37 @@
+{
+  "canisters": {
+    "template": {
+      "build": "cargo build --target wasm32-unknown-unknown --package  template --release",
+      "candid": "src/template/src/lib.did",
+      "wasm": "target/wasm32-unknown-unknown/release/template.wasm",
+      "type": "custom"
+    },
+    "template_assets": {
+      "dependencies": [
+        "template"
+      ],
+      "frontend": {
+        "entrypoint": "src/template_assets/src/index.html"
+      },
+      "source": [
+        "src/template_assets/assets",
+        "dist/template_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

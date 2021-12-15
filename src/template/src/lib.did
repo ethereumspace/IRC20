@@ -1,0 +1,10 @@
+
+
+service:(nat,text) ->{
+    "mint":(principal,nat) -> ();
+    "transfer":(principal,nat) -> ();
+    "balance_of":(principal) -> (nat) query;
+    "symbol":() -> (text) query;
+    "current_supply":()->(nat)query ;
+    "total_supply":() -> (nat) query;
+}

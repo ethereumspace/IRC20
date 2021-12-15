@@ -1,14 +1,14 @@
 {
   "canisters": {
-    "template": {
+    "irc20": {
       "build": "./build.sh",
-      "candid": "src/template/src/lib.did",
-      "wasm": "target/wasm32-unknown-unknown/release/template.wasm",
+      "candid": "src/irc20/src/lib.did",
+      "wasm": "target/wasm32-unknown-unknown/release/irc20.wasm",
       "type": "custom"
     },
     "template_assets": {
       "dependencies": [
-        "template"
+        "irc20"
       ],
       "frontend": {
         "entrypoint": "src/template_assets/src/index.html"
